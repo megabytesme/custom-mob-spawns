@@ -1,7 +1,7 @@
-package mod.azylooper.custommobspawns.mixin;
+package mod.megabytesme.custommobspawns.mixin;
 
 import it.unimi.dsi.fastutil.objects.Object2IntOpenHashMap;
-import mod.azylooper.custommobspawns.CustomMobSpawns;
+import mod.megabytesme.custommobspawns.CustomMobSpawns;
 import net.minecraft.entity.SpawnGroup;
 import net.minecraft.world.SpawnHelper;
 import org.spongepowered.asm.mixin.Mixin;

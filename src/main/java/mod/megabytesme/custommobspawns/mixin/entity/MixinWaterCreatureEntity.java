@@ -1,9 +1,10 @@
-package mod.azylooper.custommobspawns.mixin.entity;
+package mod.megabytesme.custommobspawns.mixin.entity;
 
-import mod.azylooper.custommobspawns.CustomMobSpawns;
 import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.entity.mob.WaterCreatureEntity;
 import org.spongepowered.asm.mixin.Mixin;
+
+import mod.megabytesme.custommobspawns.CustomMobSpawns;
 
 @Mixin(WaterCreatureEntity.class)
 public abstract class MixinWaterCreatureEntity extends MobEntity {

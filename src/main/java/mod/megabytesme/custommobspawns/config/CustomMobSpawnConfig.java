@@ -1,4 +1,4 @@
-package mod.azylooper.custommobspawns.config;
+package mod.megabytesme.custommobspawns.config;
 
 import me.shedaniel.autoconfig.ConfigData;
 import me.shedaniel.autoconfig.annotation.Config;

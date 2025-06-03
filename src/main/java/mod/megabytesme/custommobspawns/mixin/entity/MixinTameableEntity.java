@@ -1,11 +1,12 @@
-package mod.azylooper.custommobspawns.mixin.entity;
+package mod.megabytesme.custommobspawns.mixin.entity;
 
-import mod.azylooper.custommobspawns.CustomMobSpawns;
 import net.minecraft.entity.data.TrackedData;
 import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.entity.passive.TameableEntity;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
+
+import mod.megabytesme.custommobspawns.CustomMobSpawns;
 
 @Mixin(TameableEntity.class)
 public class MixinTameableEntity extends MobEntity {

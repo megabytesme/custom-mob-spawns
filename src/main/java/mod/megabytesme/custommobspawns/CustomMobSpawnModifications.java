@@ -1,6 +1,5 @@
-package mod.azylooper.custommobspawns;
+package mod.megabytesme.custommobspawns;
 
-import mod.azylooper.custommobspawns.config.CustomMobSpawnConfig;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectionContext;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
@@ -16,6 +15,8 @@ import net.minecraft.world.biome.SpawnSettings;
 
 import java.util.Objects;
 import java.util.function.Predicate;
+
+import mod.megabytesme.custommobspawns.config.CustomMobSpawnConfig;
 
 public class CustomMobSpawnModifications extends CustomMobSpawns {
     public static void modifySpawns() {

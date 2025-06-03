@@ -1,11 +1,12 @@
-package mod.azylooper.custommobspawns.mixin.entity;
+package mod.megabytesme.custommobspawns.mixin.entity;
 
-import mod.azylooper.custommobspawns.CustomMobSpawns;
 import net.minecraft.entity.passive.ChickenEntity;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
+
+import mod.megabytesme.custommobspawns.CustomMobSpawns;
 
 @Mixin(ChickenEntity.class)
 public class MixinChickenEntity {

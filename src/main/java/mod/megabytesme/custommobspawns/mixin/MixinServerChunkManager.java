@@ -1,6 +1,5 @@
-package mod.azylooper.custommobspawns.mixin;
+package mod.megabytesme.custommobspawns.mixin;
 
-import mod.azylooper.custommobspawns.CustomMobSpawns;
 import net.minecraft.entity.SpawnGroup;
 import net.minecraft.server.world.ServerChunkManager;
 import net.minecraft.server.world.ServerWorld;
@@ -9,6 +8,9 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
+
+import mod.megabytesme.custommobspawns.CustomMobSpawns;
+
 import java.util.List;
 
 @Mixin(ServerChunkManager.class)

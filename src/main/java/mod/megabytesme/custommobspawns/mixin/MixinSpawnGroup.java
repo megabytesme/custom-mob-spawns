@@ -1,7 +1,5 @@
-package mod.azylooper.custommobspawns.mixin;
+package mod.megabytesme.custommobspawns.mixin;
 
-import mod.azylooper.custommobspawns.CustomMobSpawns;
-import mod.azylooper.custommobspawns.config.CustomMobSpawnConfig.CustomMobSpawnGroup;
 import net.minecraft.entity.SpawnGroup;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
@@ -10,6 +8,9 @@ import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
+
+import mod.megabytesme.custommobspawns.CustomMobSpawns;
+import mod.megabytesme.custommobspawns.config.CustomMobSpawnConfig.CustomMobSpawnGroup;
 
 import java.util.HashMap;
 import java.util.Map;

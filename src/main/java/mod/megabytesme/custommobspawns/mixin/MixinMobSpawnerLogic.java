@@ -1,6 +1,5 @@
-package mod.azylooper.custommobspawns.mixin;
+package mod.megabytesme.custommobspawns.mixin;
 
-import mod.azylooper.custommobspawns.CustomMobSpawns;
 import net.minecraft.block.spawner.MobSpawnerLogic;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.util.math.BlockPos;
@@ -10,6 +9,8 @@ import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
+
+import mod.megabytesme.custommobspawns.CustomMobSpawns;
 
 @Mixin(MobSpawnerLogic.class)
 public class MixinMobSpawnerLogic {

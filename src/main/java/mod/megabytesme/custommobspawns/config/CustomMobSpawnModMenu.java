@@ -1,4 +1,4 @@
-package mod.azylooper.custommobspawns.config;
+package mod.megabytesme.custommobspawns.config;
 
 import com.terraformersmc.modmenu.api.ConfigScreenFactory;
 import com.terraformersmc.modmenu.api.ModMenuApi;
