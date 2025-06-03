@@ -11,8 +11,8 @@
 	],
 	"contact": {
 		"homepage": "https://modrinth.com/project/custom-mob-spawns-(renewed!)",
-		"sources": "https://github.com/MegaBytesMe/custom-mob-spawns",
-		"issues": "https://github.com/MegaBytesMe/custom-mob-spawns/issues"
+		"sources": "https://github.com/MegaBytesMe/custom-mob-spawns-renewed",
+		"issues": "https://github.com/MegaBytesMe/custom-mob-spawns-renewed/issues"
 	},
 	"license": "MIT",
 	"icon": "assets/custom-mob-spawns/icon.png",
