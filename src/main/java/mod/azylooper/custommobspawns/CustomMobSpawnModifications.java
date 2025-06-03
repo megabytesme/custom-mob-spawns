@@ -13,7 +13,6 @@ import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.Identifier;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.SpawnSettings;
-import org.slf4j.event.Level;
 
 import java.util.Objects;
 import java.util.function.Predicate;
@@ -21,7 +20,7 @@ import java.util.function.Predicate;
 public class CustomMobSpawnModifications extends CustomMobSpawns {
     public static void modifySpawns() {
         CustomMobSpawnConfig config = SPAWNS_CONFIG;
-        
+
         config.mobSpawnAdditions.forEach(addition -> {
             if (addition.biomeId.isBlank() && addition.biomeTag.isBlank())
                 crash("An addition entry is missing a biome ID or tag!");
@@ -50,30 +49,30 @@ public class CustomMobSpawnModifications extends CustomMobSpawns {
                             addition.spawnGroup,
                             new SpawnSettings.SpawnEntry(
                                 Objects.requireNonNull(Registries.ENTITY_TYPE.get(entityKey(addition.mobId))),
-                                addition.weight,
                                 addition.minCount,
                                 addition.maxCount
-                            )
+                            ),
+                            addition.weight
                         );
                     }
                 );
         });
-        
+
         config.mobSpawnRemovals.forEach(removal -> {
             if (removal.biomeId.isBlank() && removal.biomeTag.isBlank())
                 crash("A removal entry is missing a biome ID or tag!");
-            
+
             Predicate<BiomeSelectionContext> biomePredicate = removal.biomeId.isBlank() ?
                 BiomeSelectors.tag(biomeTag(removal.biomeTag)) :
                 BiomeSelectors.includeByKey(biomeKey(removal.biomeId));
-            
+
             print(String.format(
                 "Creating removal for mob '%s' from biome '%s' or tag '%s'",
                 removal.mobId,
                 removal.biomeId,
                 removal.biomeTag
             ));
-            
+
             BiomeModifications
                 .create(createId(Integer.toString(removal.hashCode())))
                 .add(
@@ -86,15 +85,15 @@ public class CustomMobSpawnModifications extends CustomMobSpawns {
                     }
                 );
         });
-        
+
         config.mobSpawnReplacements.forEach(replacement -> {
             if (replacement.biomeId.isBlank() && replacement.biomeTag.isBlank())
                 crash("A replacement entry is missing a biome ID or tag!");
-            
+
             Predicate<BiomeSelectionContext> biomePredicate = replacement.biomeId.isBlank() ?
                 BiomeSelectors.tag(biomeTag(replacement.biomeTag)) :
                 BiomeSelectors.includeByKey(biomeKey(replacement.biomeId));
-            
+
             print(String.format(
                 "Creating replacement for mob '%s' from biome '%s' or tag '%s', with mob '%s', to group '%s' with weight '%d', min count '%d', and max count '%d'",
                 replacement.originalMobId,
@@ -106,7 +105,7 @@ public class CustomMobSpawnModifications extends CustomMobSpawns {
                 replacement.replacementMinCount,
                 replacement.replacementMaxCount
             ));
-            
+
             BiomeModifications
                 .create(createId(Integer.toString(replacement.hashCode())))
                 .add(
@@ -116,29 +115,29 @@ public class CustomMobSpawnModifications extends CustomMobSpawns {
                         context.getSpawnSettings().removeSpawnsOfEntityType(
                             Registries.ENTITY_TYPE.get(entityKey(replacement.originalMobId))
                         );
-                        
+
                         context.getSpawnSettings().addSpawn(
                             replacement.replacementSpawnGroup,
                             new SpawnSettings.SpawnEntry(
                                 Objects.requireNonNull(Registries.ENTITY_TYPE.get(entityKey(replacement.replacementMobId))),
-                                replacement.replacementWeight,
                                 replacement.replacementMinCount,
                                 replacement.replacementMaxCount
-                            )
+                            ),
+                            replacement.replacementWeight
                         );
                     }
                 );
         });
     }
-    
+
     private static RegistryKey<Biome> biomeKey(String id) {
         return RegistryKey.of(RegistryKeys.BIOME, Identifier.of(id));
     }
-    
+
     private static RegistryKey<EntityType<?>> entityKey(String id) {
         return RegistryKey.of(RegistryKeys.ENTITY_TYPE, Identifier.of(id));
     }
-    
+
     private static TagKey<Biome> biomeTag(String tag) {
         return TagKey.of(RegistryKeys.BIOME, Identifier.of(tag));
     }
