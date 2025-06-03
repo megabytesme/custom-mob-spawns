@@ -1,6 +1,6 @@
 {
 	"required": true,
-	"package": "mod.azylooper.custommobspawns.mixin",
+	"package": "mod.megabytesme.custommobspawns.mixin",
 	"compatibilityLevel": "JAVA_17",
 	"refmap": "custom-mob-spawns.refmap.json",
 	"mixins": [

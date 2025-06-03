@@ -2,15 +2,15 @@
 	"schemaVersion": 1,
 	"id": "custom-mob-spawns",
 	"version": "${version}",
-	"name": "Custom Mob Spawns",
-	"description": "Simple configurable mob spawning.\nFork of Custom Spawns that supports 1.20 and beyond.",
+	"name": "Custom Mob Spawns (Renewed!)",
+	"description": "Simple configurable mob spawning.\nFork of Custom Mob Spawns (which is a fork of Custom Spawns) that supports 1.21.5 and beyond.",
 	"authors": [
 		"MegaBytesMe",
 		"AzyLooper",
 		"B3spectacled"
 	],
 	"contact": {
-		"homepage": "https://modrinth.com/mod/custom-mob-spawns/",
+		"homepage": "https://modrinth.com/project/custom-mob-spawns-(renewed!)",
 		"sources": "https://github.com/MegaBytesMe/custom-mob-spawns",
 		"issues": "https://github.com/MegaBytesMe/custom-mob-spawns/issues"
 	},
@@ -19,10 +19,10 @@
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"mod.azylooper.custommobspawns.CustomMobSpawns"
+			"mod.megabytesme.custommobspawns.CustomMobSpawns"
 		],
 		"modmenu": [
-			"mod.azylooper.custommobspawns.config.CustomMobSpawnModMenu"
+			"mod.megabytesme.custommobspawns.config.CustomMobSpawnModMenu"
 		]
 	},
 	"mixins": [
