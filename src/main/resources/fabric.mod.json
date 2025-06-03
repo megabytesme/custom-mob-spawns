@@ -5,13 +5,14 @@
 	"name": "Custom Mob Spawns",
 	"description": "Simple configurable mob spawning.\nFork of Custom Spawns that supports 1.20 and beyond.",
 	"authors": [
+		"MegaBytesMe",
 		"AzyLooper",
 		"B3spectacled"
 	],
 	"contact": {
 		"homepage": "https://modrinth.com/mod/custom-mob-spawns/",
-		"sources": "https://github.com/AzyLooper/custom-mob-spawns",
-		"issues": "https://github.com/AzyLooper/custom-mob-spawns/issues"
+		"sources": "https://github.com/MegaBytesMe/custom-mob-spawns",
+		"issues": "https://github.com/MegaBytesMe/custom-mob-spawns/issues"
 	},
 	"license": "MIT",
 	"icon": "assets/custom-mob-spawns/icon.png",
@@ -31,11 +32,11 @@
 		"fabricloader": ">=0.11.3",
 		"minecraft": ">=1.21",
 		"java": ">=17",
-		"cloth-config2": ">=15.0.127",
+		"cloth-config2": ">=18.0.145",
 		"fabric-api": ">=0.100.1"
 	},
 	"suggests": {
-		"modmenu": ">=11.0.0-beta.1"
+		"modmenu": ">=14.0.0-rc.2"
 	},
 	"breaks": {
 		"customspawns": "*"
