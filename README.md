@@ -1,4 +1,6 @@
 # Custom Mob Spawns (Renewed!)
+![icon](https://github.com/user-attachments/assets/70b2934c-57c1-4fca-940e-7e87de8033e3)
+
 https://modrinth.com/project/custom-mob-spawns-(renewed!)
 
 Simple configurable mob spawning.
